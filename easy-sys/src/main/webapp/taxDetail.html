@@ -1,0 +1,12 @@
+
+<form role="form" ng-submit="addTax()">
+	<div class="form-group">
+		<label for="taxName">Tax Name:</label> <input type="text"
+			class="form-control" id="taxName" name="taxName" ng-model="form.taxName" required="required"/>
+	</div>
+	<div class="form-group">
+		<label for="taxPercent">Tax Percent:</label> <input type="text"
+			class="form-control" id="taxPercent" name="taxPercent" ng-model="form.taxPercent" required="required"/>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button><p style="color: green; font: bold;">{{message}}</p>
+</form>

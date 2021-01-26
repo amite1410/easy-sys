@@ -21,6 +21,7 @@ jobs:
         java-version: '11'
 
     - name: Build with Maven
+      working-directory: easy-sys
       run: easy-sys/mvn clean install
 
     - name: Deploy to Azure Web App

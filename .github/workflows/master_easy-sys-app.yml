@@ -22,7 +22,7 @@ jobs:
 
     - name: Build with Maven
       working-directory: easy-sys
-      run: easy-sys/mvn clean install
+      run: mvn clean install
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2

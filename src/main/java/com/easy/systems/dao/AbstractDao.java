@@ -49,11 +49,10 @@ public abstract class AbstractDao<PK extends Serializable, T> {
         getSession().delete(entity);
     }
      
-    protected CriteriaBuilder createEntityCriteria(){
+      protected Criteria createEntityCriteria(){
     	
-    	
-    	
-        return getSession().getCriteriaBuilder();
+    	//adding the running code   	
+        return getSession().createCriteria(persistentClass);
         
     }
  

@@ -1,0 +1,30 @@
+<form role="form" ng-submit="getInventory()">
+<div class="form-group">
+				<label for="selectedVendor">Select Vendor</label> <select
+					class="form-control" ng-model="selectedVendor"
+					ng-options="x.vendorName for x in vendors" required="required"
+					ng-change="getproducts()">
+				</select>
+			</div>
+			
+			
+			<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Product Name</th>
+					<th>Total  Case</th>
+					<th>Loose</th>
+					<th>Total Quantity</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="x in inventoryproducts" style="font-size: smaller;">
+				<td>{{ $index + 1 }}</td>
+				<td>{{ x.productName }}</td>
+				<td>{{ x.totalCase }}</td>
+				<td>{{ x.looseQuantity }}</td>
+				<td>{{ x.totalQuantity }}</td>
+
+			</tr>
+			</table>
+</form>

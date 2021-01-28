@@ -1,0 +1,29 @@
+<form role="form" ng-submit="addInventory()">
+
+	<div style="width: 50%;">
+		<div class="form-group">
+			<label for="selectedVendor">Select Vendor</label> <select
+				class="form-control" ng-model="selectedVendor"
+				ng-options="x.vendorName for x in vendors" required="required" ng-change="getproduct()">
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="selectedProduct">Select product: </label> <select
+				class="form-control" ng-model="selectedProduct"
+				ng-options="x.productName for x in products" required="required">
+			</select>
+		</div>
+			<div class="form-group">
+			<label for="totalCase">Total Case</label> <input type="number"
+				class="form-control" id="totalCase" name="totalCase"
+				ng-model="form.totalCase" required="required" />
+		</div>
+			<div class="form-group">
+			<label for="looseQuantity">Loose Quantity</label> <input type="number"
+				class="form-control" id="looseQuantity" name="looseQuantity"
+				ng-model="form.looseQuantity" required="required" />
+		</div>
+		<p style="color: green; font: bold;">{{message}}</p>
+		<button type="submit" class="btn btn-primary">Add</button>
+	</div>
+</form>

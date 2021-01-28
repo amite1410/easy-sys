@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<script src="api/angular.min.js"></script>
+<script src="api/angular-route.js"></script>
+<script src="api/jquery-3.2.0.min.js"></script>
+<script src="api/bootstrap.min.js"></script>
+<script src="api/datePicker.js"></script>
+
+
+<script src="script/sales-management.js"></script>
+<script src="script/inventory.js"></script>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shree Mannu Enterprises</title>
+
+<style type="text/css">
+footer {
+	background-color: #555;
+	color: white;
+	padding: 15px;
+}
+</style>
+</head>
+<body ng-app="sales-management">
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Logo</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#addTax">ADD TAX</a></li>
+					<li><a href="#addVendor">Add Vendor</a></li>
+
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Product<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#addProduct">Add Product</a></li>
+							<li><a href="#updateProduct">Update Product</a></li>
+						</ul></li>
+					<li><a href="#addRoute">Add Route</a></li>
+					
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Retailer<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#addRetailer">Add Retailer</a></li>
+							<li><a href="#updateRetailer">Update Retailer</a></li>
+						</ul></li>
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Inventory<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#addInventory">Add Inventory</a></li>
+							<li><a href="#updateInventory">Update Inventory</a></li>
+							<li><a href="#viewInventory">Inventory Status</a></li>
+						</ul></li>
+
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Invoice<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#addInvoice">Add Invoice</a></li>
+							<li><a href="#viewInvoice">View Invoice</a></li>
+						</ul></li>
+					<li><a href="#reports">Sale Report</a></li>
+					<li><a href="#dailyColletion">Daily Collection</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div ng-view class="container" style=""></div>
+	<footer class="container-fluid text-center">
+		<p>Copyrights Reserved</p>
+	</footer>
+</body>
+</html>

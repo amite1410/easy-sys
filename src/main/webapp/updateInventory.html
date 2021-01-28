@@ -1,0 +1,25 @@
+<form role="form" ng-submit="updateInventory()">
+
+	<div style="width: 50%;">
+		<div class="form-group">
+			<label for="selectedTax">Select Vendor</label> <select
+				class="form-control" ng-model="selectedVendor"
+				ng-options="x.vendorName for x in vendors" required="required"
+				ng-change="getInventory()">
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="selectedVendor">Select product: </label> <select
+				class="form-control" ng-model="selectedProduct"
+				ng-options="x.productName for x in products" required="required">
+			</select>
+						<div class="form-group">
+			<label for="caseAdded">Total Case</label> <input type="number"
+				class="form-control" id="caseAdded" name="caseAdded"
+				ng-model="form.caseAdded" required="required" />
+		</div>
+		</div>
+		<button type="submit" class="btn btn-primary">Add</button>
+		<p style="color: green; font: bold;">{{message}}</p>
+	</div>
+</form>

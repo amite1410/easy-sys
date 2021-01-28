@@ -58,12 +58,12 @@ public class DailySaleReportDao extends AbstractDao<Integer, InvoiceProductDetai
 			productDetails = new InvoiceProductDetails();
 			for(int j=0;j<l1.size();j++){
 				String product = (String) l1.get(j);
-				long units=(long)l1.get(j+1);
-				long freeUnits=(long)l1.get(j+2);
+				long units=(Long)l1.get(j+1);
+				long freeUnits=(Long)l1.get(j+2);
 				BigDecimal totalVal= (BigDecimal)l1.get(j+3);
 				
 						
-						Long caseS=((long)l1.get(j+4));
+						Long caseS=((Long)l1.get(j+4));
 						int caseSold=caseS.intValue(); 	
 						
 				productDetails.setProductCode(product);
